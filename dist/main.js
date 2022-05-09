@@ -350,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1652115086650
+      // 1652116838204
       var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -375,7 +375,7 @@ block.setAttribute("id", "keyboard");
 BODY.appendChild(block);
 
 
-let keyboardEng = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', '\\', 'Delete', 'CapsLock', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', "'", 'Enter', 'Shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', 'Shift', 'Control', 'Meta', 'Alt', ' ', 'Alt', 'Control', 'ArrowLeft', 'ArrowDown', 'ArrowRight'];
+let keyboardEng = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace', 'Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', '\\', 'Delete', 'CapsLock', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', "'", 'Enter', 'Shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/','↑', 'Shift', 'Ctrl', 'Win', 'Alt', ' ', 'Alt', 'Ctrl', '←', '↓', '→'];
 
 // document.onkeydown = function(event){
 //     console.log(event);
@@ -398,7 +398,10 @@ document.querySelectorAll(".keyboard-key")[14].setAttribute("id", "tab");
 document.querySelectorAll(".keyboard-key")[29].setAttribute("id", "caps_lock");
 document.querySelectorAll(".keyboard-key")[41].setAttribute("id", "enter");
 document.querySelectorAll(".keyboard-key")[42].setAttribute("id", "left_shift");
-
+document.querySelectorAll(".keyboard-key")[54].setAttribute("id", "right_shift");
+document.querySelectorAll(".keyboard-key")[55].setAttribute("id", "ctrl");
+document.querySelectorAll(".keyboard-key")[58].setAttribute("id", "space");
+document.querySelectorAll(".keyboard-key")[60].setAttribute("id", "ctrl");
 
 
 /***/ })
@@ -473,7 +476,7 @@ document.querySelectorAll(".keyboard-key")[42].setAttribute("id", "left_shift");
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("18682fd8d52af29acc82")
+/******/ 		__webpack_require__.h = () => ("235238ff8b71baef1b63")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
