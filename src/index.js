@@ -177,7 +177,6 @@ document.onkeyup = function(event){
 document.querySelectorAll('#keyboard .keyboard-key').forEach(function(element){
     element.addEventListener('mousedown', (event)=>{
         element.classList.add("pressed");
-        console.log(event.currentTarget);
         let code = "";
         if(event.currentTarget.getAttribute("data") === "altleft"){
            
@@ -201,28 +200,38 @@ document.querySelectorAll('#keyboard .keyboard-key').forEach(function(element){
 
         }
         else if(event.currentTarget.getAttribute("data") === "enter"){
-             
+            code = "\n";
+            textarea.value += code;
         }
         else if(event.currentTarget.getAttribute("data") === "delete"){
-             
+            textarea.value = textarea.value.slice(0, -1);
         }
         else if(event.currentTarget.getAttribute("data") === "backspace"){
-             
+            textarea.value = textarea.value.slice(0, -1);
         }
         else if(event.currentTarget.getAttribute("data") === "arrowright"){
-            code = "→"
+            code = "→";
+            console.log(code);
             textarea.value += code;
+            textarea.value = textarea.value.slice(0, -1);
         }
         else if(event.currentTarget.getAttribute("data") === "arrowleft"){
             code = "←"
             textarea.value += code;
+            textarea.value = textarea.value.slice(0, -1);
         }
         else if(event.currentTarget.getAttribute("data") === "arrowdown"){
-            code = "↓"
+            code = '↓'
             textarea.value += code;
+            textarea.value = textarea.value.slice(0, -1);
         }
         else if(event.currentTarget.getAttribute("data") === "arrowup"){
             code = "↑"
+            textarea.value += code;
+            textarea.value = textarea.value.slice(0, -1);
+        }
+        else if(event.currentTarget.getAttribute("data") === "tab"){
+            code = "    "
             textarea.value += code;
         }
         else{
