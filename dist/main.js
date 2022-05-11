@@ -350,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1652127694345
+      // 1652140098413
       var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -546,7 +546,6 @@ document.onkeyup = function(event){
 document.querySelectorAll('#keyboard .keyboard-key').forEach(function(element){
     element.addEventListener('mousedown', (event)=>{
         element.classList.add("pressed");
-        console.log(event.currentTarget);
         let code = "";
         if(event.currentTarget.getAttribute("data") === "altleft"){
            
@@ -570,28 +569,38 @@ document.querySelectorAll('#keyboard .keyboard-key').forEach(function(element){
 
         }
         else if(event.currentTarget.getAttribute("data") === "enter"){
-             
+            code = "\n";
+            textarea.value += code;
         }
         else if(event.currentTarget.getAttribute("data") === "delete"){
-             
+            textarea.value = textarea.value.slice(0, -1);
         }
         else if(event.currentTarget.getAttribute("data") === "backspace"){
-             
+            textarea.value = textarea.value.slice(0, -1);
         }
         else if(event.currentTarget.getAttribute("data") === "arrowright"){
-            code = "→"
+            code = "→";
+            console.log(code);
             textarea.value += code;
+            textarea.value = textarea.value.slice(0, -1);
         }
         else if(event.currentTarget.getAttribute("data") === "arrowleft"){
             code = "←"
             textarea.value += code;
+            textarea.value = textarea.value.slice(0, -1);
         }
         else if(event.currentTarget.getAttribute("data") === "arrowdown"){
-            code = "↓"
+            code = '↓'
             textarea.value += code;
+            textarea.value = textarea.value.slice(0, -1);
         }
         else if(event.currentTarget.getAttribute("data") === "arrowup"){
             code = "↑"
+            textarea.value += code;
+            textarea.value = textarea.value.slice(0, -1);
+        }
+        else if(event.currentTarget.getAttribute("data") === "tab"){
+            code = "    "
             textarea.value += code;
         }
         else{
@@ -696,7 +705,7 @@ document.querySelectorAll('#keyboard .keyboard-key').forEach(function(element){
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("d327ab249aa9fd41818b")
+/******/ 		__webpack_require__.h = () => ("f70c7ee7bf3da27610a1")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
