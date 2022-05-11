@@ -545,83 +545,84 @@ document.onkeyup = function(event){
 
 document.querySelectorAll('#keyboard .keyboard-key').forEach(function(element){
     element.addEventListener('mousedown', (event)=>{
-        element.classList.add("pressed");
         let code = "";
-        if(event.currentTarget.getAttribute("data") === "altleft"){
-           
-        }
-        else if(event.currentTarget.getAttribute("data") === "altright"){
-            
-        }
-        else if(event.currentTarget.getAttribute("data") === "controlleft"){
-            
-        }
-        else if(event.currentTarget.getAttribute("data") === "controlright"){
-           
-        }
-        else if(event.currentTarget.getAttribute("data") === "shiftleft"){
-            
-        }
-        else if(event.currentTarget.getAttribute("data") === "shiftright"){
-             
-        }
-        else if(event.currentTarget.getAttribute("data") === "meta"){
-
-        }
-        else if(event.currentTarget.getAttribute("data") === "enter"){
-            code = "\n";
-            textarea.value += code;
-        }
-        else if(event.currentTarget.getAttribute("data") === "delete"){
-            textarea.value = textarea.value.slice(0, -1);
-        }
-        else if(event.currentTarget.getAttribute("data") === "backspace"){
-            textarea.value = textarea.value.slice(0, -1);
-        }
-        else if(event.currentTarget.getAttribute("data") === "arrowright"){
-            code = "→";
-            console.log(code);
-            textarea.value += code;
-            textarea.value = textarea.value.slice(0, -1);
-        }
-        else if(event.currentTarget.getAttribute("data") === "arrowleft"){
-            code = "←"
-            textarea.value += code;
-            textarea.value = textarea.value.slice(0, -1);
-        }
-        else if(event.currentTarget.getAttribute("data") === "arrowdown"){
-            code = '↓'
-            textarea.value += code;
-            textarea.value = textarea.value.slice(0, -1);
-        }
-        else if(event.currentTarget.getAttribute("data") === "arrowup"){
-            code = "↑"
-            textarea.value += code;
-            textarea.value = textarea.value.slice(0, -1);
-        }
-        else if(event.currentTarget.getAttribute("data") === "tab"){
-            code = "    "
-            textarea.value += code;
+        if(event.currentTarget.getAttribute("data") === "capslock"){
+            event.currentTarget.classList.toggle('pressed');
         }
         else{
-            if(event.shiftKey === true && document.querySelector('#keyboard .keyboard-key[data="capslock"]').classList.contains('pressed')){
-                code = element.getAttribute('data');
+            element.classList.add("pressed");
+            if(event.currentTarget.getAttribute("data") === "altleft"){
+           
             }
-            else {
-                if(event.shiftKey === true || document.querySelector('#keyboard .keyboard-key[data="capslock"]').classList.contains('pressed')){
-                    code = element.getAttribute('data').toUpperCase();
-                }
-                else{ 
+            else if(event.currentTarget.getAttribute("data") === "altright"){
+                
+            }
+            else if(event.currentTarget.getAttribute("data") === "controlleft"){
+                
+            }
+            else if(event.currentTarget.getAttribute("data") === "controlright"){
+               
+            }
+            else if(event.currentTarget.getAttribute("data") === "shiftleft"){
+                
+            }
+            else if(event.currentTarget.getAttribute("data") === "shiftright"){
+                 
+            }
+            else if(event.currentTarget.getAttribute("data") === "meta"){
+    
+            }
+            else if(event.currentTarget.getAttribute("data") === "enter"){
+                code = "\n";
+            }
+            else if(event.currentTarget.getAttribute("data") === "delete"){
+                textarea.value = textarea.value.slice(0, -1);
+            }
+            else if(event.currentTarget.getAttribute("data") === "backspace"){
+                textarea.value = textarea.value.slice(0, -1);
+            }
+            else if(event.currentTarget.getAttribute("data") === "arrowright"){
+                code = "→";
+            }
+            else if(event.currentTarget.getAttribute("data") === "arrowleft"){
+                code = "←"
+            }
+            else if(event.currentTarget.getAttribute("data") === "arrowdown"){
+                code = '↓'
+            }
+            else if(event.currentTarget.getAttribute("data") === "arrowup"){
+                code = "↑"
+            }
+            else if(event.currentTarget.getAttribute("data") === "tab"){
+                code = "    "
+            }
+            else{
+                if(event.shiftKey === true && document.querySelector('#keyboard .keyboard-key[data="capslock"]').classList.contains('pressed')){
                     code = element.getAttribute('data');
+                }
+                else {
+                    if(event.shiftKey === true || document.querySelector('#keyboard .keyboard-key[data="capslock"]').classList.contains('pressed')){
+                        code = element.getAttribute('data').toUpperCase();
+                    }
+                    else{ 
+                        code = element.getAttribute('data');
+                    }
                 }
             }
         }
         textarea.value += code;
     }); 
 });
+
 document.querySelectorAll('#keyboard .keyboard-key').forEach(function(element){
-    element.addEventListener('mouseup', ()=>{
-        element.classList.remove("pressed");
+    element.addEventListener('mouseup', (event)=>{
+        if(event.currentTarget.getAttribute("data") === "capslock"){
+
+        }
+        else{
+            element.classList.remove("pressed");
+        }
+        
     }); 
 });
 
@@ -705,7 +706,7 @@ document.querySelectorAll('#keyboard .keyboard-key').forEach(function(element){
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("f70c7ee7bf3da27610a1")
+/******/ 		__webpack_require__.h = () => ("ec1f3d00adb6e6dbf859")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
