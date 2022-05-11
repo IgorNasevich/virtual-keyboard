@@ -1,4 +1,15 @@
-import './scss/app.scss';
+"use strict";
+self["webpackHotUpdatevirtual_keyboard"]("main",{
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _scss_app_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/app.scss */ "./src/scss/app.scss");
+
 
 const BODY = document.querySelector("body");
 let block = document.createElement("div");
@@ -33,3 +44,17 @@ document.querySelectorAll(".keyboard-key")[54].setAttribute("id", "right_shift")
 document.querySelectorAll(".keyboard-key")[55].setAttribute("id", "ctrl");
 document.querySelectorAll(".keyboard-key")[58].setAttribute("id", "space");
 document.querySelectorAll(".keyboard-key")[60].setAttribute("id", "ctrl");
+
+
+/***/ })
+
+},
+/******/ function(__webpack_require__) { // webpackRuntimeModules
+/******/ /* webpack/runtime/getFullHash */
+/******/ (() => {
+/******/ 	__webpack_require__.h = () => ("bd6f74206a0420f7b2d1")
+/******/ })();
+/******/ 
+/******/ }
+);
+//# sourceMappingURL=main.db33a31e88157952f9df.hot-update.js.map
