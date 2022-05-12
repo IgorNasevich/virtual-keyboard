@@ -1,0 +1,105 @@
+$REGULAR_BUTTON: 52px;
+$COLUMN_GAP: 6px;
+$BACKSPACE_BUTTON: $REGULAR_BUTTON * 2 + $COLUMN_GAP * 2;
+$TAB_BUTTON: $REGULAR_BUTTON + $COLUMN_GAP;
+$CAPS_LOCK_BUTTON: $REGULAR_BUTTON * 2 + $COLUMN_GAP * 3;
+$DEL_BUTTON:$REGULAR_BUTTON * 2 + $COLUMN_GAP;
+$ENTER_BUTTON: $REGULAR_BUTTON * 2;
+$LEFT_SHIFT_BUTTON:$REGULAR_BUTTON * 3 + $COLUMN_GAP * 3;
+$RIGHT_SHIFT_BUTTON:$REGULAR_BUTTON;
+$CTRL_BUTTON: $REGULAR_BUTTON * 1.5 + $COLUMN_GAP;
+$SPACE_BUTTON:$REGULAR_BUTTON * 6 + $COLUMN_GAP * 5;
+
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#keyboard{
+    width: 13*$REGULAR_BUTTON + 13*$COLUMN_GAP+$BACKSPACE_BUTTON;
+    border: 2px solid black;
+    padding: $COLUMN_GAP;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: $COLUMN_GAP;
+    row-gap: 8px;
+}
+
+.keyboard-key{
+    transition: 0.4s;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $REGULAR_BUTTON;
+    height: $REGULAR_BUTTON;
+    border: 1px solid black;
+    border-radius: 6px;
+    background: black;
+    color:white;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#backspace {
+    width:$BACKSPACE_BUTTON; 
+}
+#tab{
+    width:$TAB_BUTTON;
+}
+#del{
+    width:$DEL_BUTTON;
+}
+#caps_lock{
+    width:$CAPS_LOCK_BUTTON;
+}
+#enter{
+    width:$ENTER_BUTTON;
+}
+#left_shift{
+    width:$LEFT_SHIFT_BUTTON;
+}
+#right_shift{
+    width:$RIGHT_SHIFT_BUTTON;
+}
+#ctrl{
+    width:$CTRL_BUTTON;
+} #space{
+    width:$SPACE_BUTTON;
+}
+
+.textarea{
+    margin: auto;
+    width: 13*$REGULAR_BUTTON + 13*$COLUMN_GAP+$BACKSPACE_BUTTON;
+    height: $REGULAR_BUTTON*4;
+    margin: 50px 0;
+}
+
+@keyframes pushDown {
+    0%{
+        border: 1px solid black;
+        border-radius: 6px;
+        background: black;
+    }
+    100%{
+        border: 3px solid black;
+        border-radius: 35%;
+        background: red;
+    }
+    
+}
+
+.pressed{
+    animation-name: pushDown;
+    animation-duration: 0.2s;
+    background: red;
+    border: 3px solid black;
+    border-radius: 35%;
+}
+
+.notes{
+    margin: auto;
+    font-size: 20px;
+}
+
