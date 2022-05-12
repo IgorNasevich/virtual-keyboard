@@ -258,9 +258,3 @@ document.querySelectorAll('#keyboard .keyboard-key').forEach(function(element){
 });
 
 
-// document.onkeydown = function(event){
-    
-//     console.log(event.code);
-//     keyboardRus.push(event.key);
-//     console.log(keyboardRus);
-// }
