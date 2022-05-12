@@ -76,8 +76,30 @@ $SPACE_BUTTON:$REGULAR_BUTTON * 6 + $COLUMN_GAP * 5;
     margin: 50px 0;
 }
 
+@keyframes pushDown {
+    0%{
+        border: 1px solid black;
+        border-radius: 6px;
+        background: black;
+    }
+    100%{
+        border: 3px solid black;
+        border-radius: 35%;
+        background: red;
+    }
+    
+}
+
 .pressed{
-    transition: 0.2s;
+    animation-name: pushDown;
+    animation-duration: 0.2s;
     background: red;
+    border: 3px solid black;
+    border-radius: 35%;
+}
+
+.notes{
+    margin: auto;
+    font-size: 20px;
 }
 

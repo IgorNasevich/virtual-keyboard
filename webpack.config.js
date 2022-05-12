@@ -1,6 +1,7 @@
 const path = require('path');
 const miniCss = require('mini-css-extract-plugin');
 const webpack = require('webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
    watch: true,
@@ -34,6 +35,7 @@ module.exports = {
          filename: 'style.css',
       }),
       new webpack.HotModuleReplacementPlugin(),    
+      new CleanWebpackPlugin()
    ],
   
 };
