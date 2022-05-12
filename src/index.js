@@ -107,13 +107,10 @@ function init(arr){
     document.querySelectorAll(".keyboard-key")[54].setAttribute("id", "ctrl");
     document.querySelectorAll(".keyboard-key")[57].setAttribute("id", "space");
     document.querySelectorAll(".keyboard-key")[59].setAttribute("id", "ctrl");
-}
-init(arr);
 
 
 
-
-
+    
 
 document.onkeydown = function(event){
     if(event.code === "CapsLock"){
@@ -256,5 +253,12 @@ document.querySelectorAll('#keyboard .keyboard-key').forEach(function(element){
         
     }); 
 });
+
+
+
+}
+init(arr);
+
+
 
 
